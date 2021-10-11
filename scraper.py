@@ -13,10 +13,7 @@ s3 = boto3.resource(
     aws_secret_access_key='JJBK8f9QX6zTsSNVfK6Va9qn+zrAkaSbPt2ZuXdO'
 )
 
-brands = ['nike', 'adidas', 'new+balance', 'jordan', 'fila', 'reebok', 
-         'asics', 'champion', 'under+armour', 'skechers', 'saucony', 
-         'avia', 'colombia', 'fubu', 'shaq', 'puma', 'salomon', 'umbro',
-         'hoka+one+one', 'brooks']
+brands = ['nike', 'adidas', 'new+balance', 'jordan', 'fila', 'reebok', 'asics', 'champion', 'under+armour', 'skechers', 'saucony','avia', 'colombia', 'fubu', 'shaq']
 
 GOOGLE_IMAGE = \
     'https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&'
@@ -58,7 +55,7 @@ def extractg(data, quantity):
                     shutil.copyfileobj(data.raw, file)
                     print('image copied')
                  
-                s3.Bucket('baalfaro').upload_file(filename, filename)
+                s3.Bucket('baalfaro').upload_file(filename, 'google/' + name +'/' + filename)
                 print('image in bucket')
 
                 os.remove(filename)
@@ -109,11 +106,11 @@ def extractb(data, quantity):
                     shutil.copyfileobj(data.raw, file)
                     print('image copied')
 
-                s3.Bucket('baalfaro').upload_file(filename, filename)
+                s3.Bucket('baalfaro').upload_file(filename, 'bing/' + name +'/' + filename)
                 print( 'image in bucket ')
 
                 os.remove(filename)
-                ' image delted '
+                print('image delted')
 
                 i += 1
             except:
@@ -123,7 +120,7 @@ def extractb(data, quantity):
 for x in brands: 
     time.sleep(5)
     data = x
-    quantityb =  5000 # how many photos you want bing 
-    quantityg =  400 # google 
+    quantityb =  15 # how many photos you want bing 
+    quantityg =  15 # google 
     extractg(data, quantityg)
     extractb(data, quantityb)
