@@ -13,7 +13,10 @@ s3 = boto3.resource(
     aws_secret_access_key='JJBK8f9QX6zTsSNVfK6Va9qn+zrAkaSbPt2ZuXdO'
 )
 
-brands = ['nike', 'adidas', 'new+balance', 'jordan', 'fila', 'reebok', 'asics', 'champion', 'under+armour', 'skechers', 'saucony','avia', 'colombia', 'fubu', 'shaq']
+brands = ['nike', 'adidas', 'new+balance', 'jordan', 'fila', 'reebok', 
+         'asics', 'champion', 'under+armour', 'skechers', 'saucony', 
+         'avia', 'colombia', 'fubu', 'shaq', 'puma', 'salomon', 'umbro',
+         'hoka+one+one', 'brooks']
 
 GOOGLE_IMAGE = \
     'https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&'
