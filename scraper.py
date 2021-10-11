@@ -120,7 +120,7 @@ def extractb(data, quantity):
 for x in brands: 
     time.sleep(5)
     data = x
-    quantityb =  15 # how many photos you want bing 
-    quantityg =  15 # google 
+    quantityb =  100 # how many photos you want bing 
+    quantityg =  100 # google 
     extractg(data, quantityg)
     extractb(data, quantityb)
