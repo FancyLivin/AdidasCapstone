@@ -9,8 +9,8 @@ import time
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id='AKIA5QEOO5ZIE7DHPJGP',
-    aws_secret_access_key='JJBK8f9QX6zTsSNVfK6Va9qn+zrAkaSbPt2ZuXdO'
+    aws_access_key_id='your credentials 
+    aws_secret_access_key='your credentials'
 )
 
 brands = ['nike', 'adidas', 'new+balance', 'jordan', 'fila', 'reebok', 
